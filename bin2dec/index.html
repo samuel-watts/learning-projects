@@ -6,14 +6,35 @@
     <title>Binary to Decimal converter</title>
   </head>
   <body>
-    <!--This is the html used for showing the input box, the button to convert and the output text-->
-    <div id="input">
-      <input id="input" />
-      <button>Convert</button>
+    <p>
+      Enter the binary that you'd like converting to decimal in the box below
+    </p>
+    <!--This is the html used for showing the input box, the button to convert, the output text and any warning alerts-->
+    <div>
+      <input id="inputBox" />
+      <button id="convert">Convert</button>
       <p id="output"></p>
+      <p id="alert" style="color: red"></p>
       <script>
+        binary = document
+          .getElementById("convert")
+          .addEventListener("click", binaryToDecimal); //links the binaryToDecimal function to the Convert button.
         function binaryToDecimal() {
-          var binary = document.getElementById("input").value;
+          var binary = document.getElementById("inputBox").value;
+          document.getElementById("alert").innerHTML = "";
+          document.getElementById("output").innerHTML = "";
+          if (binary.length != 8) {
+            //checks if the length of the string inputted is 8 characters and returns the alert if it is not.
+            binary = document.getElementById("alert").innerHTML =
+              "8 Digits required";
+          } else if (/[^01]/.test(binary)) {
+            //checks if the inputed characters are either 0 or 1 and returns the alert if they are not.
+            binary = document.getElementById("alert").innerHTML =
+              "Values must be either '1's or '0's";
+          } else
+            binary = document.getElementById("output").innerHTML =
+              //else it converts the string into integers and presents them.
+              parseInt(binary);
         }
       </script>
     </div>
