@@ -11,7 +11,7 @@
     </p>
     <!--This is the html used for showing the input box, the button to convert, the output text and any warning alerts-->
     <div>
-      <input id="inputBox" />
+      <input id="inputBox" maxlength="8" />
       <button id="convert">Convert</button>
       <p id="output"></p>
       <p id="alert" style="color: red"></p>
@@ -20,19 +20,18 @@
           .getElementById("convert")
           .addEventListener("click", binaryToDecimal); //links the binaryToDecimal function to the Convert button.
         function binaryToDecimal() {
-          var binary = document.getElementById("inputBox").value;
+          var binary = document.getElementById("inputBox").value; //takes the input and assigns it to the variable.
           document.getElementById("alert").innerHTML = ""; //sets the alert back to blank when the button is clicked.
           document.getElementById("output").innerHTML = ""; //sets the output back to blank when the button is clicked.
           if (binary.length != 8) {
             //checks if the length of the string inputted is 8 characters and returns the alert if it is not.
-            binary = document.getElementById("alert").innerHTML =
-              "8 Digits required";
+            document.getElementById("alert").innerHTML = "8 Digits required";
           } else if (/[^01]/.test(binary)) {
             //checks if the inputed characters are either 0 or 1 and returns the alert if they are not.
-            binary = document.getElementById("alert").innerHTML =
+            document.getElementById("alert").innerHTML =
               "Values must be either '1's or '0's";
           } else
-            binary = document.getElementById("output").innerHTML =
+            document.getElementById("output").innerHTML =
               //else it converts the string into an an integer and displays it in base 2 (binary).
               parseInt(binary, 2);
         }
