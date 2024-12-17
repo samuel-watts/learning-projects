@@ -21,8 +21,8 @@
           .addEventListener("click", binaryToDecimal); //links the binaryToDecimal function to the Convert button.
         function binaryToDecimal() {
           var binary = document.getElementById("inputBox").value;
-          document.getElementById("alert").innerHTML = "";
-          document.getElementById("output").innerHTML = "";
+          document.getElementById("alert").innerHTML = ""; //sets the alert back to blank when the button is clicked.
+          document.getElementById("output").innerHTML = ""; //sets the output back to blank when the button is clicked.
           if (binary.length != 8) {
             //checks if the length of the string inputted is 8 characters and returns the alert if it is not.
             binary = document.getElementById("alert").innerHTML =
