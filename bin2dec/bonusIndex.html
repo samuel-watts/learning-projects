@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swatts | Bonus-Bin2Dec</title>
-    <h1>Binary to Decimal Converter</h1>
   </head>
+  <h1>Binary to Decimal Converter</h1>
   <body>
     <p>
       Enter the binary that you'd like converting to decimal in the box below:
@@ -24,13 +24,17 @@
         function binaryToDecimal() {
           var inputBox = document.getElementById("inputBox"); //assigns the input to a variable
           var alertMsg = document.getElementById("alert"); //assigns the alert to a variable
+          var outputMsg = document.getElementById("output");
 
-          //Removes any binary characters:
+          //Removes any binary characters, presents an alert and hides output unless valid characters are entered:
           if (inputBox.value.match(/[^01]/)) {
             alertMsg.innerHTML = "Please enter either 0 or 1"; //presents alertMsg if value is not 0 or 1
             inputBox.value = inputBox.value.replace(/[^01]/g, ""); //replaces any values that arent 0 or 1 with blank
+          } else if (inputBox.value === "") {
+            outputMsg.style.display = "none"; //if inputBox has no value it hides the outputMsg
           } else {
             alertMsg.innerHTML = ""; //clears alertMsg if value is 0 or 1
+            outputMsg.style.display = "block"; //ensures outputMsg is visible
           }
 
           var binary = inputBox.value; //assigns the processed input to binary
