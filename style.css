@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  background-color: #b3b3b3;
+  text-align: center;
+}
+
+header {
+  font-size: 20px;
+}
+
+.links-container {
+  margin: 30px;
+}
+.link {
+  align-items: center;
+  background-color: #424242;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 5px;
+  width: 50%;
+}
