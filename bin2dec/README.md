@@ -19,13 +19,13 @@ constraints:
   example the natural logarithm. It's up to you to figure out which function
   to use.
 
-## User Stories
+## User Stories - [Bin2Dec](https://projects.swatts.uk/bin2dec)
 
 - User can enter up to 8 binary digits in one input field
 - User must be notified if anything other than a 0 or 1 was entered
 - User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered
 
-## Bonus features
+## Bonus features - [Bonus-Bin2Dec](https://projects.swatts.uk/bin2dec/bonusIndex)
 
 - User can enter a variable number of binary digits
 - User can't enter anything other than a 0 or 1
