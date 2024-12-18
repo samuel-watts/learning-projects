@@ -11,50 +11,50 @@
     <!--This is the html used for showing the input box and the output text-->
     <div>
       <p>Binary</p>
-      <input id="binaryInputBox" maxlength="8" />
+      <input id="binaryBox" maxlength="8" />
       <p>Decimal</p>
-      <input id="decimalInputBox" />
+      <input id="decimalBox" />
       <p id="alert" style="color: red"></p>
       <script>
         document
-          .getElementById("binaryInputBox")
+          .getElementById("binaryBox")
           .addEventListener("input", binaryToDecimal); //listens for any input and runs the function if input is found
 
         document
-          .getElementById("decimalInputBox")
+          .getElementById("decimalBox")
           .addEventListener("input", decimalToBinary);
 
         function binaryToDecimal() {
-          var binaryInputBox = document.getElementById("binaryInputBox"); //assigns the binary input to a variable
+          var binaryBox = document.getElementById("binaryBox"); //assigns the binary input to a variable
           var alertMsg = document.getElementById("alert"); //assigns the alert to a variable
-          var decimalOutputMsg = document.getElementById("decimalInputBox");
+          var decimalOutputMsg = document.getElementById("decimalBox");
 
-          //Removes any non-binary characters, presents an alert and hides output unless valid characters are entered:
-          if (binaryInputBox.value.match(/[^01]/)) {
+          //Removes any non-binary characters and presents an alert if any are inputted.
+          if (binaryBox.value.match(/[^01]/)) {
             alertMsg.innerHTML = "Please enter either 0 or 1"; //presents alertMsg if value is not 0 or 1
-            binaryInputBox.value = binaryInputBox.value.replace(/[^01]/g, ""); //replaces any values that aren't 0 or 1 with blank
+            binaryBox.value = binaryBox.value.replace(/[^01]/g, ""); //replaces any values that aren't 0 or 1 with blank
           } else {
             alertMsg.innerHTML = ""; //clears alertMsg if value is 0 or 1
           }
 
-          var binary = binaryInputBox.value; //assigns the processed input to binary
-          decimalInputBox.value = parseInt(binary, 2).toString(10); //converts the base 2 integer to base 10
+          var binary = binaryBox.value; //assigns the processed input to binary
+          decimalBox.value = parseInt(binary, 2).toString(10); //converts the base 2 integer to base 10
         }
 
         function decimalToBinary() {
-          var decimalInputBox = document.getElementById("decimalInputBox");
+          var decimalBox = document.getElementById("decimalBox");
           var alertMsg = document.getElementById("alert");
-          var binaryInputBox = document.getElementById("binaryInputBox");
+          var binaryBox = document.getElementById("binaryBox");
 
-          if (decimalInputBox.value < 0 || decimalInputBox.value > 255) {
+          if (decimalBox.value < 0 || decimalBox.value > 255) {
             alertMsg.innerHTML = "Please enter a number between 0 and 255";
-            decimalInputBox.value = "";
+            decimalBox.value = "";
           } else {
             alertMsg.innerHTML = "";
           }
 
-          var decimal = decimalInputBox.value;
-          binaryInputBox.value = parseInt(decimal, 10).toString(2);
+          var decimal = decimalBox.value;
+          binaryBox.value = parseInt(decimal, 10).toString(2);
         }
       </script>
     </div>
