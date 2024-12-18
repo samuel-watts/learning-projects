@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="bonusStyle.css" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Binary to Decimal converter</title>
+    <title>Swatts | Bonus-Bin2Dec</title>
+    <h1>Binary to Decimal Converter</h1>
   </head>
   <body>
     <p>
@@ -13,16 +15,26 @@
     <div>
       <input id="inputBox" maxlength="8" />
       <p id="output"></p>
+      <p id="alert" style="color: red"></p>
       <script>
         binary = document
           .getElementById("inputBox")
-          .addEventListener("input", binaryToDecimal);
+          .addEventListener("input", binaryToDecimal); //listens for any input and runs the function if input is found
 
         function binaryToDecimal() {
-          var inputBox = document.getElementById("inputBox");
-          inputBox.value = inputBox.value.replace(/[^01]/g, "");
-          var binary = inputBox.value;
-          document.getElementById("output").innerHTML = parseInt(binary, 2);
+          var inputBox = document.getElementById("inputBox"); //assigns the input to a variable
+          var alertMsg = document.getElementById("alert"); //assigns the alert to a variable
+
+          //Removes any binary characters:
+          if (inputBox.value.match(/[^01]/)) {
+            alertMsg.innerHTML = "Please enter either 0 or 1"; //presents alertMsg if value is not 0 or 1
+            inputBox.value = inputBox.value.replace(/[^01]/g, ""); //replaces any values that arent 0 or 1 with blank
+          } else {
+            alertMsg.innerHTML = ""; //clears alertMsg if value is 0 or 1
+          }
+
+          var binary = inputBox.value; //assigns the processed input to binary
+          document.getElementById("output").innerHTML = parseInt(binary, 2); //converts the base 10 integer to base 2
         }
       </script>
     </div>
