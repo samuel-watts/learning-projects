@@ -4,11 +4,8 @@
   --theme-colour-green: 0, 255, 0; /*green*/
   --theme-colour-blue: 0, 0, 255; /*blue*/
   --alpha: 0.35;
-  --white: white;
-  --grey: grey;
   --black: black;
   background: var(--black);
-  color: var(--white);
 }
 
 @keyframes light-up-theme-red {
@@ -75,26 +72,68 @@ body {
   border-radius: 50%;
   height: 25px;
   width: 15px;
-  animation-duration: 2.5s;
   animation-iteration-count: infinite;
+  position: relative;
+}
+
+.light::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #222; /* Dark border for better visibility */
+  width: 10px; /* Adjust width if necessary */
+  height: 10px; /* Adjust height if necessary */
+  background: #222; /* Dark color to mimic a bulb holder */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust horizontal offset */
+  top: -8px; /* Adjust vertical offset */
+}
+
+.light::after {
+  content: "";
+  top: -24px;
+  left: 60%;
+  position: absolute;
+  width: 90px;
+  height: 28px;
+  border-bottom: 3px solid #222;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.light:last-of-type::after {
+  border: none;
 }
 
 .light.bulb-red {
   background: var(--theme-colour-red);
   animation-name: light-up-theme-red;
+  animation-duration: 1.23s;
+  animation-delay: 0.13s;
+  animation-timing-function: ease-in-out;
 }
 
 .light.bulb-yellow {
   background: var(--theme-colour-yellow);
   animation-name: light-up-theme-yellow;
+  animation-duration: 1.47s;
+  animation-delay: 0.9s;
+  animation-timing-function: ease-in-out;
 }
 
 .light.bulb-green {
   background: var(--theme-colour-green);
   animation-name: light-up-theme-green;
+  animation-duration: 1.75s;
+  animation-delay: 0.27s;
+  animation-timing-function: ease-in-out;
 }
 
 .light.bulb-blue {
   background: var(--theme-colour-blue);
   animation-name: light-up-theme-blue;
+  animation-duration: 2.59s;
+  animation-delay: 0.83s;
+  animation-timing-function: ease-in-out;
 }
