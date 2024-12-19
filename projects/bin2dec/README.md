@@ -29,7 +29,3 @@ constraints:
 
 - User can enter a variable number of binary digits
 - User can't enter anything other than a 0 or 1
-
-## Useful links and resources
-
-[Binary number system](https://en.wikipedia.org/wiki/Binary_number)
