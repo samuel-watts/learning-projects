@@ -1,0 +1,100 @@
+:root {
+  --theme-colour-red: 255, 0, 0; /*red*/
+  --theme-colour-yellow: 255, 255, 0; /*yellow*/
+  --theme-colour-green: 0, 255, 0; /*green*/
+  --theme-colour-blue: 0, 0, 255; /*blue*/
+  --alpha: 0.35;
+  --white: white;
+  --grey: grey;
+  --black: black;
+  background: var(--black);
+  color: var(--white);
+}
+
+@keyframes light-up-theme-red {
+  0%,
+  100% {
+    background: rgba(var(--theme-colour-red));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-red));
+  }
+  50% {
+    background: rgba(var(--theme-colour-red), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-red), var(--alpha));
+  }
+}
+
+@keyframes light-up-theme-yellow {
+  0%,
+  100% {
+    background: rgba(var(--theme-colour-yellow));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-yellow));
+  }
+  50% {
+    background: rgba(var(--theme-colour-yellow), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-yellow), var(--alpha));
+  }
+}
+
+@keyframes light-up-theme-green {
+  0%,
+  100% {
+    background: rgba(var(--theme-colour-green));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-green));
+  }
+  50% {
+    background: rgba(var(--theme-colour-green), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-green), var(--alpha));
+  }
+}
+
+@keyframes light-up-theme-blue {
+  0%,
+  100% {
+    background: rgba(var(--theme-colour-blue));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-blue));
+  }
+  50% {
+    background: rgba(var(--theme-colour-blue), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-blue), var(--alpha));
+  }
+}
+
+body {
+  font-family: Arial;
+}
+
+.lights {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.light {
+  border-radius: 50%;
+  height: 25px;
+  width: 15px;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+.light.bulb-red {
+  background: var(--theme-colour-red);
+  animation-name: light-up-theme-red;
+}
+
+.light.bulb-yellow {
+  background: var(--theme-colour-yellow);
+  animation-name: light-up-theme-yellow;
+}
+
+.light.bulb-green {
+  background: var(--theme-colour-green);
+  animation-name: light-up-theme-green;
+}
+
+.light.bulb-blue {
+  background: var(--theme-colour-blue);
+  animation-name: light-up-theme-blue;
+}
