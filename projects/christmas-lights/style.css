@@ -60,19 +60,20 @@ body {
   font-family: Arial;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .lights {
-  text-align: left; /* Centers lights within the parent container */
-  white-space: nowrap;
-  overflow: hidden;
+  text-align: left; /* Keep the lights in a single line */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Crop any content that exceeds the viewport width */
   padding: 20px;
   width: 100%;
   margin: 0 auto;
 }
 
 .light {
-  display: inline-block; /* Inline block for alignment */
+  display: inline-block;
   border-radius: 50%;
   height: 25px;
   width: 15px;
@@ -88,15 +89,15 @@ body {
 .light::before {
   content: "";
   position: absolute;
-  border: 1px solid #222; /* Dark border for better visibility */
-  width: 10px; /* Adjust width if necessary */
-  height: 10px; /* Adjust height if necessary */
-  background: #222; /* Dark color to mimic a bulb holder */
+  border: 1px solid #222;
+  width: 10px;
+  height: 10px;
+  background: #222;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust horizontal offset */
-  top: -8px; /* Adjust vertical offset */
+  left: 50%;
+  transform: translateX(-50%);
+  top: -8px;
 }
 
 .light::after {
@@ -114,6 +115,8 @@ body {
 .light:last-of-type::after {
   border: none;
 }
+
+/* Animations remain unchanged */
 
 .light.bulb-red {
   background: var(--theme-colour-red);
