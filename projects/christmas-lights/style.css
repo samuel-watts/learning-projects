@@ -78,7 +78,7 @@ body {
   width: 15px;
   animation-iteration-count: infinite;
   position: relative;
-  margin: 0 37px; /* Adds spacing between lights */
+  margin: 0 36px; /* Adds spacing between lights */
 }
 
 .light:first-of-type {
