@@ -21,11 +21,11 @@ constraints:
 
 ## User Stories - [Bin2Dec](https://projects.swatts.uk/bin2dec)
 
-- User can enter up to 8 binary digits in one input field
-- User must be notified if anything other than a 0 or 1 was entered
-- User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered
+- [X] User can enter up to 8 binary digits in one input field
+- [X] User must be notified if anything other than a 0 or 1 was entered
+- [X] User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered
 
 ## Bonus features - [Bonus-Bin2Dec](https://projects.swatts.uk/bin2dec/bonusIndex)
 
-- User can enter a variable number of binary digits
-- User can't enter anything other than a 0 or 1
+- [X] User can enter a variable number of binary digits
+- [X] User can't enter anything other than a 0 or 1
