@@ -197,27 +197,23 @@ body {
   background: var(--theme-colour-red);
   animation-name: light-up-theme-red;
   animation-duration: 1.23s;
-  animation-delay: 0.13s;
   animation-timing-function: ease-in-out;
 }
 .lights.on .light.bulb-yellow {
   background: var(--theme-colour-yellow);
   animation-name: light-up-theme-yellow;
   animation-duration: 1.47s;
-  animation-delay: 0.9s;
   animation-timing-function: ease-in-out;
 }
 .lights.on .light.bulb-green {
   background: var(--theme-colour-green);
   animation-name: light-up-theme-green;
   animation-duration: 1.75s;
-  animation-delay: 0.27s;
   animation-timing-function: ease-in-out;
 }
 .lights.on .light.bulb-blue {
   background: var(--theme-colour-blue);
   animation-name: light-up-theme-blue;
   animation-duration: 2.59s;
-  animation-delay: 0.83s;
   animation-timing-function: ease-in-out;
 }
