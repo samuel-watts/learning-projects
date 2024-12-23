@@ -152,6 +152,14 @@ body {
   flex-basis: 80px;
 }
 
+.interval-control {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 6px 12px;
+}
+
 .checkbox-container {
   cursor: pointer;
   width: 43px;
