@@ -78,7 +78,6 @@ body {
   border-radius: 50%;
   height: 25px;
   width: 15px;
-  animation-iteration-count: infinite;
   position: relative;
   margin: 0 36px; /* Adds spacing between lights */
 }
@@ -119,30 +118,103 @@ body {
 /* Animations remain unchanged */
 
 .light.bulb-red {
+  background: rgba(var(--theme-colour-red), var(--alpha));
+}
+
+.light.bulb-yellow {
+  background: rgba(var(--theme-colour-yellow), var(--alpha));
+}
+
+.light.bulb-green {
+  background: rgba(var(--theme-colour-green), var(--alpha));
+}
+
+.light.bulb-blue {
+  background: rgba(var(--theme-colour-blue), var(--alpha));
+}
+
+.light-settings {
+  background: white;
+  color: #333;
+  width: 500px;
+  margin: 30px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.light-settings .group {
+  align-items: center;
+  display: flex;
+  margin: 15px 0;
+}
+
+.light-settings .group label {
+  flex-basis: 80px;
+}
+
+.checkbox-container {
+  cursor: pointer;
+  width: 43px;
+  height: 20px;
+  background: grey;
+  border-radius: 100px;
+  margin-right: 5px;
+  position: relative;
+  padding: 6px 12px;
+  transition-duration: 0.4s;
+}
+
+.checkbox-container.active {
+  background: black;
+}
+
+.checkbox-container.active::after {
+  left: 50%;
+}
+
+.checkbox-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 100%;
+  left: 5%;
+  top: 9%;
+  transition-duration: 0.4s;
+}
+
+.light-switch {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.lights.on .light {
+  animation-iteration-count: infinite;
+}
+
+.lights.on .light.bulb-red {
   background: var(--theme-colour-red);
   animation-name: light-up-theme-red;
   animation-duration: 1.23s;
   animation-delay: 0.13s;
   animation-timing-function: ease-in-out;
 }
-
-.light.bulb-yellow {
+.lights.on .light.bulb-yellow {
   background: var(--theme-colour-yellow);
   animation-name: light-up-theme-yellow;
   animation-duration: 1.47s;
   animation-delay: 0.9s;
   animation-timing-function: ease-in-out;
 }
-
-.light.bulb-green {
+.lights.on .light.bulb-green {
   background: var(--theme-colour-green);
   animation-name: light-up-theme-green;
   animation-duration: 1.75s;
   animation-delay: 0.27s;
   animation-timing-function: ease-in-out;
 }
-
-.light.bulb-blue {
+.lights.on .light.bulb-blue {
   background: var(--theme-colour-blue);
   animation-name: light-up-theme-blue;
   animation-duration: 2.59s;
