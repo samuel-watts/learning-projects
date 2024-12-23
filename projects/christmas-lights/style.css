@@ -115,8 +115,6 @@ body {
   border: none;
 }
 
-/* Animations remain unchanged */
-
 .light.bulb-red {
   background: rgba(var(--theme-colour-red), var(--alpha));
 }
@@ -152,12 +150,36 @@ body {
   flex-basis: 80px;
 }
 
-.interval-control {
+.half-speed {
+  cursor: pointer;
   border: 1px solid black;
   border-radius: 5px;
+  width: 75px;
   font-family: inherit;
   font-size: inherit;
   padding: 6px 12px;
+}
+
+.reset-speed {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75px;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 6px 12px;
+  margin-left: 10px;
+}
+
+.double-speed {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75px;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 6px 12px;
+  margin-left: 10px;
 }
 
 .checkbox-container {
