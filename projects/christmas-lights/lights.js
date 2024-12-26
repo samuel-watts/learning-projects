@@ -3,6 +3,10 @@ const lightSwitch = document.querySelector(".light-switch");
 const lightContainer = document.querySelector(".lights");
 const lightSwitchState = document.querySelector(".light-switch-state");
 const lightSwitchLabels = { on: "off", off: "on" };
+const colourOne = document.querySelector(".colour-one")
+const colourTwo = document.querySelector(".colour-two")
+const colourThree = document.querySelector(".colour-three")
+const colourFour = document.querySelector(".colour-four")
 
 checkBoxContainer.addEventListener("click", (e) => {
   e.target.classList.toggle("active");
