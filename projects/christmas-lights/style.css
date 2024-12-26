@@ -186,6 +186,7 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   width: 75px;
+  padding: 6px 12px;
 }
 
 .colour-two {
@@ -193,6 +194,7 @@ body {
   border-radius: 5px;
   width: 75px;
   margin-left: 10px;
+  padding: 6px 12px;
 }
 
 .colour-three {
@@ -200,6 +202,7 @@ body {
   border-radius: 5px;
   width: 75px;
   margin-left: 10px;
+  padding: 6px 12px;
 }
 
 .colour-four {
@@ -207,6 +210,7 @@ body {
   border-radius: 5px;
   width: 75px;
   margin-left: 10px;
+  padding: 6px 12px;
 }
 
 .checkbox-container {
