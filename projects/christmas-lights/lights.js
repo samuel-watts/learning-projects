@@ -14,7 +14,7 @@ colourPickerOne.addEventListener("input", function() {
 });
 
 colourPickerTwo.addEventListener("input", function() {
-  image.style.filter = `hue-rotate(${this.value}deg)`; 
+  theme-colour-one.style.filter = `hue-rotate(${this.value}deg)`; 
 });
 
 colourPickerThree.addEventListener("input", function() {
