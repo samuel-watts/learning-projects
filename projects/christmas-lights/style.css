@@ -1,58 +1,58 @@
 :root {
-  --theme-colour-red: 255, 0, 0; /*red*/
-  --theme-colour-yellow: 255, 255, 0; /*yellow*/
-  --theme-colour-green: 0, 255, 0; /*green*/
-  --theme-colour-blue: 0, 0, 255; /*blue*/
+  --theme-colour-one: 255, 0, 0; /*red*/
+  --theme-colour-two: 255, 255, 0; /*yellow*/
+  --theme-colour-three: 0, 255, 0; /*green*/
+  --theme-colour-four: 0, 0, 255; /*blue*/
   --alpha: 0.35;
   --black: black;
   background: var(--black);
 }
 
-@keyframes light-up-theme-red {
+@keyframes light-up-theme-one {
   0%,
   100% {
-    background: rgba(var(--theme-colour-red));
-    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-red));
+    background: rgba(var(--theme-colour-one));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-one));
   }
   50% {
-    background: rgba(var(--theme-colour-red), var(--alpha));
-    box-shadow: 0px 0px 4px rgba(var(--theme-colour-red), var(--alpha));
+    background: rgba(var(--theme-colour-one), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-one), var(--alpha));
   }
 }
 
-@keyframes light-up-theme-yellow {
+@keyframes light-up-theme-two {
   0%,
   100% {
-    background: rgba(var(--theme-colour-yellow));
-    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-yellow));
+    background: rgba(var(--theme-colour-two));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-two));
   }
   50% {
-    background: rgba(var(--theme-colour-yellow), var(--alpha));
-    box-shadow: 0px 0px 4px rgba(var(--theme-colour-yellow), var(--alpha));
+    background: rgba(var(--theme-colour-two), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-two), var(--alpha));
   }
 }
 
-@keyframes light-up-theme-green {
+@keyframes light-up-theme-three {
   0%,
   100% {
-    background: rgba(var(--theme-colour-green));
-    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-green));
+    background: rgba(var(--theme-colour-three));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-three));
   }
   50% {
-    background: rgba(var(--theme-colour-green), var(--alpha));
-    box-shadow: 0px 0px 4px rgba(var(--theme-colour-green), var(--alpha));
+    background: rgba(var(--theme-colour-three), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-three), var(--alpha));
   }
 }
 
-@keyframes light-up-theme-blue {
+@keyframes light-up-theme-four {
   0%,
   100% {
-    background: rgba(var(--theme-colour-blue));
-    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-blue));
+    background: rgba(var(--theme-colour-four));
+    box-shadow: 0px 0px 20px 3px rgba(var(--theme-colour-four));
   }
   50% {
-    background: rgba(var(--theme-colour-blue), var(--alpha));
-    box-shadow: 0px 0px 4px rgba(var(--theme-colour-blue), var(--alpha));
+    background: rgba(var(--theme-colour-four), var(--alpha));
+    box-shadow: 0px 0px 4px rgba(var(--theme-colour-four), var(--alpha));
   }
 }
 
@@ -115,20 +115,20 @@ body {
   border: none;
 }
 
-.light.bulb-red {
-  background: rgba(var(--theme-colour-red), var(--alpha));
+.light.bulb-one {
+  background: rgba(var(--theme-colour-one), var(--alpha));
 }
 
-.light.bulb-yellow {
-  background: rgba(var(--theme-colour-yellow), var(--alpha));
+.light.bulb-two {
+  background: rgba(var(--theme-colour-two), var(--alpha));
 }
 
-.light.bulb-green {
-  background: rgba(var(--theme-colour-green), var(--alpha));
+.light.bulb-three {
+  background: rgba(var(--theme-colour-three), var(--alpha));
 }
 
-.light.bulb-blue {
-  background: rgba(var(--theme-colour-blue), var(--alpha));
+.light.bulb-four {
+  background: rgba(var(--theme-colour-four), var(--alpha));
 }
 
 .light-settings {
@@ -182,6 +182,33 @@ body {
   margin-left: 10px;
 }
 
+.colour-one {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75px;
+}
+
+.colour-two {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75px;
+  margin-left: 10px;
+}
+
+.colour-three {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75px;
+  margin-left: 10px;
+}
+
+.colour-four {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75px;
+  margin-left: 10px;
+}
+
 .checkbox-container {
   cursor: pointer;
   width: 43px;
@@ -223,27 +250,27 @@ body {
   animation-iteration-count: infinite;
 }
 
-.lights.on .light.bulb-red {
-  background: var(--theme-colour-red);
-  animation-name: light-up-theme-red;
+.lights.on .light.bulb-one {
+  background: var(--theme-colour-one);
+  animation-name: light-up-theme-one;
   animation-duration: 1.23s;
   animation-timing-function: ease-in-out;
 }
-.lights.on .light.bulb-yellow {
-  background: var(--theme-colour-yellow);
-  animation-name: light-up-theme-yellow;
+.lights.on .light.bulb-two {
+  background: var(--theme-colour-two);
+  animation-name: light-up-theme-two;
   animation-duration: 1.47s;
   animation-timing-function: ease-in-out;
 }
-.lights.on .light.bulb-green {
-  background: var(--theme-colour-green);
-  animation-name: light-up-theme-green;
+.lights.on .light.bulb-three {
+  background: var(--theme-colour-three);
+  animation-name: light-up-theme-three;
   animation-duration: 1.75s;
   animation-timing-function: ease-in-out;
 }
-.lights.on .light.bulb-blue {
-  background: var(--theme-colour-blue);
-  animation-name: light-up-theme-blue;
+.lights.on .light.bulb-four {
+  background: var(--theme-colour-four);
+  animation-name: light-up-theme-four;
   animation-duration: 2.59s;
   animation-timing-function: ease-in-out;
 }
