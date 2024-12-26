@@ -183,40 +183,20 @@ body {
 }
 
 .colour-one {
-  background: rgba(var(--theme-colour-one));
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 75px;
-  height: 32px;
   padding: 6px 12px;
 }
 
 .colour-two {
-  background: rgba(var(--theme-colour-two));
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 75px;
-  height: 32px;
   margin-left: 10px;
   padding: 6px 12px;
 }
 
 .colour-three {
-  background: rgba(var(--theme-colour-three));
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 75px;
-  height: 32px;
   margin-left: 10px;
   padding: 6px 12px;
 }
 
 .colour-four {
-  background: rgba(var(--theme-colour-four));
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 75px;
-  height: 32px;
   margin-left: 10px;
   padding: 6px 12px;
 }
