@@ -183,7 +183,7 @@ body {
 }
 
 .colour-one {
-  background: var(--theme-colour-one);
+  background: rgba(var(--theme-colour-one));
   border: 1px solid black;
   border-radius: 5px;
   width: 75px;
@@ -192,7 +192,7 @@ body {
 }
 
 .colour-two {
-  background: var(--theme-colour-two);
+  background: rgba(var(--theme-colour-two));
   border: 1px solid black;
   border-radius: 5px;
   width: 75px;
@@ -202,7 +202,7 @@ body {
 }
 
 .colour-three {
-  background: var(--theme-colour-three);
+  background: rgba(var(--theme-colour-three));
   border: 1px solid black;
   border-radius: 5px;
   width: 75px;
@@ -212,7 +212,7 @@ body {
 }
 
 .colour-four {
-  background: var(--theme-colour-four);
+  background: rgba(var(--theme-colour-four));
   border: 1px solid black;
   border-radius: 5px;
   width: 75px;
