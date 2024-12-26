@@ -4,27 +4,6 @@ const lightContainer = document.querySelector(".lights");
 const lightSwitchState = document.querySelector(".light-switch-state");
 const lightSwitchLabels = { on: "off", off: "on" };
 
-const colourPickerOne = document.getElementById("colour-one");
-const colourPickerTwo = document.getElementById("colour-two");
-const colourPickerThree = document.getElementById("colour-three");
-const colourPickerFour = document.getElementById("colour-four");
-
-colourPickerOne.addEventListener("input", function() {
-  image.style.filter = `hue-rotate(${this.value}deg)`; 
-});
-
-colourPickerTwo.addEventListener("input", function() {
-  theme-colour-one.style.filter = `hue-rotate(${this.value}deg)`; 
-});
-
-colourPickerThree.addEventListener("input", function() {
-  image.style.filter = `hue-rotate(${this.value}deg)`; 
-});
-
-colourPickerFour.addEventListener("input", function() {
-  image.style.filter = `hue-rotate(${this.value}deg)`; 
-});
-
 checkBoxContainer.addEventListener("click", (e) => {
   e.target.classList.toggle("active");
   lightSwitch.click();
